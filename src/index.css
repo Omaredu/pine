@@ -1,11 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(174, 255, 174);
+  font-family: 'Poppins', sans-serif;
+  font-size: 10pt;
+  height: 100%;
+  padding: 0;
 }
 
 code {
@@ -49,44 +49,6 @@ code {
   left: 15px;
 }
 
-.button
-{
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-
-  border-radius: 5px;
-}
-
-.button1 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #FF9900;
-}
-
-.button1:hover {
-  background-color: rgb(255, 168, 6);
-  color: white;
-}
-
-.button2 {
-  background-color:#FF9900; 
-  color:white; 
-  margin-left: 20px;
-  margin-right: 15px;
-}
-
-.button2:hover {
-  background-color: rgb(224, 146, 0);
-  color: white;
-}
 
 .cuadro
 {
@@ -98,7 +60,7 @@ code {
   border-radius: 5px;
   width: 250px;
   
-  
+
   margin-left: 45px;
   margin-top: 34px;
 }
@@ -230,7 +192,7 @@ code {
   width: 60%;
   padding: 10px 32px;
   margin-left: 40px;
-  margin-top: -35px;
+  margin-top: -250px;
 }
 
 .linea_pa_abajo
@@ -240,4 +202,9 @@ code {
   width: 1px;
   margin-top: -30px;
   margin-left: 8px;
+}
+
+#map
+{
+  height:100%;
 }

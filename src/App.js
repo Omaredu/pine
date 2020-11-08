@@ -7,7 +7,8 @@ export default class App extends Component {
   state = {
     loginShown: false,
     signupShown: false,
-    isLoggedIn: false
+    isLoggedIn: false,
+    adding: false
   }
 
   _toggleLoginPanel = () => {
@@ -18,7 +19,7 @@ export default class App extends Component {
   _toggleSignupPanel = () => {
     this.setState({ signupShown: !this.state.signupShown, loginShown: false })
   }
-  
+    /*Ahorita vengo*/ /* okok, yo tambien ahi regreso*/
   render () {
     return (
       <div>
@@ -36,7 +37,7 @@ export default class App extends Component {
             <SignupPanel visible={this.state.signupShown} />   
           </div>
           
-          <div className="left-panel-container">      
+          <div className="left-panel-container" style={{ display: this.state.isLoggedIn ? 'flex' : 'none' }}>      
             <LeftPanel />
           </div>
           <Map/>

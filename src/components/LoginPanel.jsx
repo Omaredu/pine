@@ -11,21 +11,18 @@ export default class LoginPanel extends Component {
 
               <input 
                 type="email" 
-                placeholder="Email..." 
-                className="cuadro texto" 
+                placeholder="Email..."
                 name="email"
                 />
 
               <input 
                 type="password" 
-                placeholder="Contraseña..." 
-                className="cuadro texto"
+                placeholder="Contraseña..."
                 name="password" 
                 />
 
               <input 
-                type="submit" 
-                className="cuadro iniciar_sesion" 
+                type="submit"
                 value="Iniciar Sesión"
                 />
 

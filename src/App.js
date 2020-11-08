@@ -1,33 +1,47 @@
+import { GoogleMap } from '@react-google-maps/api';
 import React, { Component } from 'react';
-import { LoginPanel, LeftPanel, Button } from './components';
-import Map from "./components/Map"
+import { LoginPanel, LeftPanel, SignupPanel, Button } from './components';
+import Map from "./components/Map";
 
 export default class App extends Component {
   state = {
     loginShown: false,
+    signupShown: false,
+    isLoggedIn: false
   }
 
   _toggleLoginPanel = () => {
-    this.setState({ loginShown: !this.state.loginShown})
+    this.setState({ loginShown: !this.state.loginShown, signupShown: false })
+  
   }
 
+  _toggleSignupPanel = () => {
+    this.setState({ signupShown: !this.state.signupShown, loginShown: false })
+  }
+  
   render () {
     return (
       <div>
         <div class="rectangulo">
-          <div className="buttons-container">
+          <div className="buttons-container" style={{ display: !this.state.isLoggedIn ? 'flex' : 'none' }}>
             <Button onClick={this._toggleLoginPanel}>Iniciar Sesión</Button>
-            <Button onClick={() => console.log(":)")}>Registrarse</Button>
+            <Button onClick={this._toggleSignupPanel}>Registrarse</Button>
           </div>
-          <div className="login-panel-container">
-            <LoginPanel visible={this.state.loginShown} />    
+          <div className="buttons-container" style={{ display: this.state.isLoggedIn ? 'flex' : 'none' }}>
+            <Button onClick={() => {}}>Cerrar Sesión</Button>
           </div>
 
-          <Map/>
+          <div className="login-panel-container">
+            <LoginPanel visible={this.state.loginShown} />   
+            <SignupPanel visible={this.state.signupShown} />   
+          </div>
           
-          <LeftPanel />
+          <div className="left-panel-container">      
+            <LeftPanel />
+          </div>
+          <Map/>
+          </div>
         </div>
-      </div>
     );
   }
 }

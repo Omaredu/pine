@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
- import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
   const containerStyle = {
    width: '100vw',
@@ -10,6 +10,7 @@ import React, { Component } from 'react';
    lat: 25.648265,
    lng: -100.328451
  };
+
 
   function MyComponent() {
    return (

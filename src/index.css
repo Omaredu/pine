@@ -31,3 +31,15 @@ code {
   padding: 0 2.5vw;
   margin-top: 6em;
 }
+
+.left-panel-container
+{
+  position: absolute;
+  z-index: 1;
+  width: 95vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2em;
+  margin-left: 20px;
+}

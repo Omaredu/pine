@@ -1,27 +1,44 @@
 import React, { Component } from 'react'
 
+import './styles/left_panel.css'
+
 export default class LeftPanel extends Component {
     render () {
         return (
-            <div class="cuadro_inicial izq">
-              <div class="images_group">
-              <div class="images"></div>
-              <div class="images"></div>
-              <div class="images"></div>
-              </div>
+            <div className="left-panel">
+              <div className="group">
+                <div className="images"></div>
+                <div className="images"></div>
+                <div className="images"></div>
+            </div>
+              <input type="text" className="input" placeholder="Punto de origen..."/>
 
-              <input type="text" class="cuadro button_izquierda" placeholder="Punto de origen..."/>
-              <div class="cuadro destinos">
+              <div className="apartado">
+
                 <p class="destino"><b>Destinos</b></p>
-                <div class="images images_destinos">
-                  <p class="images_destinos_texto"><b>1</b></p>
+
+                <div class="images">
+
+                  <p class="destino number"><b>1</b></p>
+
                 </div>
-                <input type="text" class="cuadro lupa" placeholder="Destino..."/>
-                <div class="linea_pa_abajo"></div>
+
+                <input 
+                type="text" 
+                className="input destinos"
+                placeholder="Destino..."
+                />
+
+                <div class="linea_d_abajo"></div>
+
                 <div class="images images_destino_plus" onClick></div>
+                
               </div>
 
-              <button type="button" class="cuadro cotizar">Cotizar</button>
+              <input 
+                type="submit"
+                value="Cotizar"
+                />
             </div>
         )
     }

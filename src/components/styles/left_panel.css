@@ -1,4 +1,4 @@
-.login-panel {
+.left-panel {
     padding: 2em 3em 0 3em;
     display: flex;
     flex-direction: column;
@@ -6,24 +6,33 @@
     background-color: white;
     border-radius: 5px;
     width: 17em;
+    height: 651px;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.05);
 }
 
-.login-panel > input[type='password'], [type='email'] {
+.input 
+{
     padding: 1.5em 2em;
     border-radius: 5px;
     margin-bottom: 1em;
     border: solid 2px #dbdbdb;
     width: 18em; 
     outline: none;
-    
 }
 
-.login-panel > input[type='password']:focus, [type='email']:focus {
+.input:focus
+{
     border: solid 2px #ff9900;
 }
 
-.login-panel > input[type='submit'] {
+p
+{
+    padding: 1em;
+    color: #000000;
+    font-size: 9pt;
+}
+
+.left-panel > input[type='submit'] {
     padding: 1.5em 2em;
     border: none;
     outline: none;
@@ -33,19 +42,48 @@
     color: white;
     cursor: pointer;    
     transition: all .2s;
+    margin-top: 7em;
 }
 
-.login-panel > input[type='submit']:hover {
+.left-panel > input[type='submit']:hover {
     box-shadow: 0 0 0 3px #ff990050;
 }
 
-.login-panel > p {
-    padding: 1em;
-    color: #ff9900;
-    cursor: pointer;
-    font-size: 9pt;
+.group
+{
+    text-align: start;
+} 
+
+.images
+{
+    height: 55px;
+    width: 55px;
+    background-color: rgb(255, 153, 0, 0.29);
+border-radius: 50%;
+    display: inline-block;
+    margin: 10px;
+    margin-top: 20px;
 }
 
-.login-panel > p:hover {
-    text-decoration: underline;
+.images:hover
+{
+    background-color: #ff9900;
+    cursor: pointer;
 }
+
+.apartado
+{
+    background-color: #dbdbdb;
+    border-radius: 5px;
+}
+
+.destino
+{
+    font-size: 14px;
+}
+
+.number
+{
+    margin-top: -2em;
+}
+

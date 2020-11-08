@@ -1,0 +1,50 @@
+.login-panel {
+    padding: 2em 3em 0 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    width: 20em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.05);
+}
+
+.login-panel > input[type='password'], [type='email'] {
+    padding: 1.5em 2em;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    border: solid 2px #dbdbdb;
+    width: 21.5em; 
+    outline: none;    
+}
+
+.login-panel > input[type='password']:focus, [type='email']:focus {
+    border: solid 2px #ff9900;
+}
+
+.login-panel > input[type='submit'] {
+    padding: 1.5em 2em;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 26em;
+    background-color: #ff9900;
+    color: white;
+    cursor: pointer;    
+    transition: all .2s;
+}
+
+.login-panel > input[type='submit']:hover {
+    box-shadow: 0 0 0 3px #ff990050;
+}
+
+.login-panel > p {
+padding: 1em;
+    color: #ff9900;
+    cursor: pointer;
+    font-size: 9pt;
+}
+
+.login-panel > p:hover {
+    text-decoration: underline;
+}

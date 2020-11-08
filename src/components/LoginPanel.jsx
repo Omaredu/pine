@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
 
+import './styles/login_panel.css'
+
 export default class LoginPanel extends Component {
     render () {
         return (
-            <form class="cuadro_inicial">
+            <form 
+              class="login-panel" 
+              style={{ display: !this.props.visible ? "none" : "flex" }}>
 
               <input 
                 type="email" 
@@ -25,7 +29,7 @@ export default class LoginPanel extends Component {
                 value="Iniciar Sesión"
                 />
 
-              <div class="password"><u>¿Olvidaste tu contraseña?</u></div>
+              <p class="password">¿Olvidaste tu contraseña?</p>
 
             </form>
         )

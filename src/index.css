@@ -13,6 +13,11 @@ code {
     monospace;
 }
 
+.map
+{
+  z-index: -5;
+}
+
 .rectangulo
 {
   width: 100%;
@@ -132,8 +137,8 @@ code {
 .images_destinos_texto
 {
   position: absolute;
-  top: 290px;
-  left: 80px;
+  top: 286px;
+  left: 82px;
   color: white;
 }
 
@@ -200,11 +205,6 @@ code {
   height: 40%;
   background-color: gray;
   width: 1px;
-  margin-top: -30px;
+  margin-top: -50px;
   margin-left: 8px;
-}
-
-#map
-{
-  height:100%;
 }

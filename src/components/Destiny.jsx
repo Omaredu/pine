@@ -9,7 +9,7 @@ export default class Destiny extends Component {
                 <div className="destiny-index">
                     <p>{this.props.index || 1}</p>
                 </div>
-                <input type="text" onChange={this.props.value} placeholder="Destino..." />
+                <input type="text" onChange={this.props.value} placeholder="Estado o dirección..." />
             </div>
         )
     }

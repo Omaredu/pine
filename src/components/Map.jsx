@@ -10,6 +10,19 @@ export default class Map extends Component {
     ]
   }
 
+  _renderLocations () {
+    if (this.props.markers) {
+      return (
+        this.props.markers.map(location => (
+          <Marker 
+            lat={location.Latitude || location.latitude}
+            lng={location.Longitude || location.longitude}
+          />
+        ))
+      )
+    }
+  }
+
   render () {
     return (
       <HEREMap 
@@ -21,9 +34,7 @@ export default class Map extends Component {
         zoom={12}
         interactive={true}
       >
-        <Marker lat={25.646804} lng={-100.190796} />
-        <Marker lat={25.655411} lng={-100.201327} />
-        <RouteLine shape={this.state.shape} strokeColor="#ff9900" lineWidth={3} />
+        {this._renderLocations()}
       </HEREMap>
     )
   }

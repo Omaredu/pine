@@ -56,3 +56,18 @@ code {
   height: 45vh;
   border-radius: 5px;
 }
+
+.results {
+  padding: 1em 2em;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.05);
+  z-index: 20;
+  border-radius: 5px;
+  right: 2em;
+  top: 2em;
+}
+
+.distance {
+  color: #bbbbbb;
+}

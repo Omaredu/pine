@@ -1,11 +1,7 @@
 
 import React, { Component } from 'react';
-<<<<<<< HEAD
 
 import { LoginPanel, LeftPanel, SignupPanel, Button, CreateOverlay } from './components';
-=======
-import { LoginPanel, LeftPanel, SignupPanel, Button, Addingpanel } from './components';
->>>>>>> 48a62ee05ee6bc30cf478a57c75887d0d5e95500
 import Map from "./components/Map";
 
 export default class App extends Component {
@@ -13,12 +9,8 @@ export default class App extends Component {
     loginShown: false,
     signupShown: false,
     isLoggedIn: true,
-<<<<<<< HEAD
     addingVehicle: false,
     createVehicleActive: false
-=======
-    adding: false
->>>>>>> 48a62ee05ee6bc30cf478a57c75887d0d5e95500
   }
 
   _toggleLoginPanel = () => {
@@ -29,7 +21,6 @@ export default class App extends Component {
   _toggleSignupPanel = () => {
     this.setState({ signupShown: !this.state.signupShown, loginShown: false })
   }
-<<<<<<< HEAD
 
   _toggleCreateVehicleActive = () => {
     this.setState({ createVehicleActive: !this.state.createVehicleActive })
@@ -64,37 +55,6 @@ export default class App extends Component {
       </div>
 
       
-=======
-  render () {
-    return (
-      <div>
-        <div class="rectangulo">
-
-          <div className="buttons-container" style={{ display: !this.state.isLoggedIn ? 'flex' : 'none' }}>
-            <Button onClick={this._toggleLoginPanel}>Iniciar Sesión</Button>
-            <Button onClick={this._toggleSignupPanel}>Registrarse</Button>
-          </div>
-
-          <div className="buttons-container" style={{ display: this.state.isLoggedIn ? 'flex' : 'none' }}>
-            <Button onClick={() => {}}>Cerrar Sesión</Button>
-          </div>
-
-          <div className="login-panel-container">
-            <LoginPanel visible={this.state.loginShown} />   
-            <SignupPanel visible={this.state.signupShown} />   
-          </div>
-          
-          <div className="left-panel-container" style={{ display: this.state.isLoggedIn ? 'flex' : 'none' }}>      
-            <LeftPanel />
-          </div>
-          <div className="adding-panel-container">            
-            <Addingpanel />
-          </div>
-  
-          <Map/>
-        </div>
-      </div>
->>>>>>> 48a62ee05ee6bc30cf478a57c75887d0d5e95500
     );
   }
 }

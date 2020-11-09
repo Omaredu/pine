@@ -27,10 +27,12 @@ export default class LeftPanel extends Component {
   }
   
   _searchLocations = async () => {
-    let origin = await fetch(`https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json?apiKey=MlTmlELGjE4wdzZg97MUVJmp3cUi3rYErHDk1ol4aqg&query=${this.state.origin}&beginHighlight=%3Cb%3E&endHighlight=%3C%2Fb%3E`)
-    let locationOne = await fetch(`https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json?apiKey=MlTmlELGjE4wdzZg97MUVJmp3cUi3rYErHDk1ol4aqg&query=${this.state.origin}&beginHighlight=%3Cb%3E&endHighlight=%3C%2Fb%3E`)
-    let locationTwo = await fetch(`https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json?apiKey=MlTmlELGjE4wdzZg97MUVJmp3cUi3rYErHDk1ol4aqg&query=${this.state.origin}&beginHighlight=%3Cb%3E&endHighlight=%3C%2Fb%3E`)
-    let locationThree = await fetch(`https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json?apiKey=MlTmlELGjE4wdzZg97MUVJmp3cUi3rYErHDk1ol4aqg&query=${this.state.origin}&beginHighlight=%3Cb%3E&endHighlight=%3C%2Fb%3E`)
+    const apiKey = "MlTmlELGjE4wdzZg97MUVJmp3cUi3rYErHDk1ol4aqg"
+
+    let origin = await fetch(`https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json?apiKey=${apiKey}&query=${this.state.origin}&beginHighlight=%3Cb%3E&endHighlight=%3C%2Fb%3E`)
+    let locationOne = await fetch(`https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json?apiKey=${apiKey}&query=${this.state.locationOne}&beginHighlight=%3Cb%3E&endHighlight=%3C%2Fb%3E`)
+    let locationTwo = await fetch(`https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json?apiKey=${apiKey}&query=${this.state.locationTwo}&beginHighlight=%3Cb%3E&endHighlight=%3C%2Fb%3E`)
+    let locationThree = await fetch(`https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json?apiKey=${apiKey}&query=${this.state.locationThree}&beginHighlight=%3Cb%3E&endHighlight=%3C%2Fb%3E`)
     
     let jsonDataOrigin = await origin.json()
     let jsonDataOne = await locationOne.json()
@@ -44,10 +46,10 @@ export default class LeftPanel extends Component {
       three: jsonDataThree.suggestions[0].locationId,
     }
 
-    let originLat = await fetch(`https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json?apiKey=MlTmlELGjE4wdzZg97MUVJmp3cUi3rYErHDk1ol4aqg&query=${this.state.origin}&beginHighlight=%3Cb%3E&endHighlight=%3C%2Fb%3E`)
-    let locationOneLat = await fetch(`https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json?apiKey=MlTmlELGjE4wdzZg97MUVJmp3cUi3rYErHDk1ol4aqg&query=${this.state.origin}&beginHighlight=%3Cb%3E&endHighlight=%3C%2Fb%3E`)
-    let locationTwoLat = await fetch(`https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json?apiKey=MlTmlELGjE4wdzZg97MUVJmp3cUi3rYErHDk1ol4aqg&query=${this.state.origin}&beginHighlight=%3Cb%3E&endHighlight=%3C%2Fb%3E`)
-    let locationThreeLat = await fetch(`https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json?apiKey=MlTmlELGjE4wdzZg97MUVJmp3cUi3rYErHDk1ol4aqg&query=${this.state.origin}&beginHighlight=%3Cb%3E&endHighlight=%3C%2Fb%3E`)
+    let originLat = await fetch(`https://geocoder.ls.hereapi.com/6.2/geocode.json?locationid=NT_5mGkj3z90Fbj4abzMbUE4C_xA&jsonattributes=1&gen=9&apiKey=${apiKey}`)
+    let locationOneLat = await fetch(`https://geocoder.ls.hereapi.com/6.2/geocode.json?locationid=NT_5mGkj3z90Fbj4abzMbUE4C_xA&jsonattributes=1&gen=9&apiKey=${apiKey}`)
+    let locationTwoLat = await fetch(`https://geocoder.ls.hereapi.com/6.2/geocode.json?locationid=NT_5mGkj3z90Fbj4abzMbUE4C_xA&jsonattributes=1&gen=9&apiKey=${apiKey}`)
+    let locationThreeLat = await fetch(`https://geocoder.ls.hereapi.com/6.2/geocode.json?locationid=NT_5mGkj3z90Fbj4abzMbUE4C_xA&jsonattributes=1&gen=9&apiKey=${apiKey}`)
     
     let jsonDataOriginLat = await originLat.json()
     let jsonDataOneLat = await locationOneLat.json()

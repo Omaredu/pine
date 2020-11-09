@@ -18,6 +18,7 @@ code {
   position: absolute;
   z-index: 10;
   width: 96vw;
+  float: left;
   padding: 1em 2vw;
 }
 
@@ -35,8 +36,7 @@ code {
 .left-panel-container
 {
   position: absolute;
-  z-index: 1;
-  width: 95vw;
+  z-index: 15;
   display: flex;
   justify-content: flex-start;
   align-items: center;

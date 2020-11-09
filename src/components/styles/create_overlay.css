@@ -1,0 +1,59 @@
+.create-overlay { 
+    position: fixed;
+    z-index: 20;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color: #00000050;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-panel {
+    border-radius: 5px;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.05);
+    width: 40em;
+    height: 77vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+ion-icon
+{
+    font-size: 3em;
+    color: #ff9900;
+    transition: color .1s;
+    margin: 5px;
+    cursor: pointer;
+}
+
+ion-icon:hover
+{
+    background-color: #ff990050;
+    border-radius: 50%;
+}
+
+.exit
+{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5em;
+    color: rgb(143, 143, 143);
+    cursor: pointer;
+    background-color: red;
+    width: 0;
+    margin-left: 25.5em;
+}
+.exit:hover
+{
+    color: black;
+}
+
+.name
+{
+    margin: 5px;
+    padding: 1.5em;
+}
+

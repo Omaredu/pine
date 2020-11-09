@@ -1,0 +1,42 @@
+.destiny-container {
+    display: flex;
+    align-items: center;
+}
+
+.destiny-index {
+    background-color: #ff9900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 2.5em;
+    min-width: 2.5em;
+    border-radius: 50%;
+    flex: 0;
+}
+
+.destiny-container > input {
+    padding: 1.3em 1em;
+    width: 90%;
+    margin-left: 1em;
+    border: solid 2px #dbdbdb;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color .15s;
+}
+
+.destiny-container > input:focus {
+    border-color: #ff9900;
+}
+
+.guide-line {
+    height: 2em;
+    width: 2px;
+    background-color: #ececec;
+    border-radius: 2px;
+    margin: 0 1.2em;
+}
+
+.destiny-list {
+    margin: 1em 0;
+}
